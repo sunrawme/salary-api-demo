@@ -45,7 +45,7 @@ pipeline {
                     ssh -i /var/lib/jenkins/.ssh/id_ed25519 \
                         -o BatchMode=yes \
                         ubuntu@192.168.73.218 \
-                        "bash ~/salary-api-deploy/deploy.sh"
+                        "bash ~/salary-api-deploy/deploy.sh ${BUILD_NUMBER}"
                 '''
             }
         }
